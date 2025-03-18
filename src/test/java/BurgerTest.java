@@ -38,18 +38,18 @@ public class BurgerTest {
     }
 
     @Test
-    public void addIngredientAddListOfIngredients() {
+    public void testAddIngredientAddListOfIngredients() {
         List<Ingredient> testIngredients = burger.ingredients;
         assertTrue(testIngredients.contains(cutlet));
     }
 
     @Test
-    public void setBunsChoosesBun() {
+    public void testSetBunsChoosesBun() {
         assertEquals(bun, burger.bun);
     }
 
     @Test
-    public void removeIngredientDeleteIngredient() {
+    public void testRemoveIngredientDeleteIngredient() {
         assertEquals(1, burger.ingredients.size());
         burger.removeIngredient(0);
         List<Ingredient> testIngredients = burger.ingredients;
@@ -57,7 +57,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void moveIngredientSwapsIngredients() {
+    public void testMoveIngredientSwapsIngredients() {
         burger.addIngredient(hotSauce);
         burger.moveIngredient(0, 1);
         List<Ingredient> testIngredients = burger.ingredients;
@@ -65,7 +65,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getPriceReturnPrice() {
+    public void testGetPriceReturnPrice() {
         Mockito.when(bun.getPrice()).thenReturn(PRICE_OF_BUN);
         Mockito.when(cutlet.getPrice()).thenReturn(PRICE_OF_CUTLET);
         float expectedPriceOfBurger = PRICE_OF_BUN * 2 + PRICE_OF_CUTLET;
@@ -74,7 +74,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getReceiptReturnReceipt() {
+    public void testGetReceiptReturnReceipt() {
         Mockito.when(bun.getName()).thenReturn("Black Bun");
         Mockito.when(cutlet.getType()).thenReturn(IngredientType.FILLING);
         Mockito.when(cutlet.getName()).thenReturn("Chicken cutlet");

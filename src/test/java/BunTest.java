@@ -15,13 +15,13 @@ public class BunTest {
     }
 
     @Test
-    public void getNameReturnNameOfBun() {
+    public void testGetNameReturnNameOfBun() {
         String actualNameOfBun = bun.getName();
         assertEquals(NAME_OF_BLACK_BUN, actualNameOfBun);
     }
 
     @Test
-    public void getPriceReturnPriceOfBun() {
+    public void testGetPriceReturnPriceOfBun() {
         float actualPriceOfBun = bun.getPrice();
         assertEquals(PRICE_OF_BLACK_BUN, actualPriceOfBun, 0.01);
     }

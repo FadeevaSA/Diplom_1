@@ -18,19 +18,19 @@ public class IngredientTest {
     }
 
     @Test
-    public void getPriceReturnPrice() {
+    public void testGetPriceReturnPrice() {
         float actualPriceOfIngredient = ingredient.getPrice();
         assertEquals(PRICE_OF_SAUCE, actualPriceOfIngredient, 0.01);
     }
 
     @Test
-    public void getNameReturnName() {
+    public void testGetNameReturnName() {
         String actualNameOfIngredient = ingredient.getName();
         assertEquals(NAME_OF_SAUCE, actualNameOfIngredient);
     }
 
     @Test
-    public void getTypeReturnType() {
+    public void testGetTypeReturnType() {
         IngredientType actualTypeOfIngredient = ingredient.getType();
         assertEquals(SAUCE, actualTypeOfIngredient);
     }
